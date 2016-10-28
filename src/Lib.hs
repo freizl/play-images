@@ -15,7 +15,7 @@ import Diagrams.Backend.Rasterific.CmdLine
 someFunc :: IO ()
 someFunc = do
   img <- loadImageIO
-  mainWith ((img ||| img ) === (img ||| img ) :: Diagram B)
+  defaultMain ((img ||| img ) === (img ||| img ) :: Diagram B)
 
 -- TODO: ImageEmb .v.s loadImageExt
 --
