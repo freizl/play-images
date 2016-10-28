@@ -17,10 +17,10 @@ someFunc = do
   img <- loadImageIO
   defaultMain ((img ||| img ) === (img ||| img ) :: Diagram B)
 
--- TODO: ImageEmb .v.s loadImageExt
---
+-- TODO: 1. ImageEmb .v.s loadImageExt
+--       2. load file in relative path??
 loadImageIO = do
-  res <- loadImageEmb "/Users/haisheng.wu/git/play-images/data/hw.jpg"
+  res <- loadImageEmb "/Users/haisheng.wu/git/play-images/data/hw-origin.jpg"
   return $ case res of
      Left err    -> mempty
      Right phone -> image phone
